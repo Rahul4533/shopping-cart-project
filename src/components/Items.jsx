@@ -5,11 +5,15 @@ function Items() {
   
   return (
     <>
-      {data.map((item,i)=>(
-        <div className={styles.wrapper} key={i}>
-        <ItemCard name={item.name} price={item.price}/>
+      
+        <div className={styles.wrapper} >
+        {data.map((item,i)=>(
+          <div key={i}>
+        <ItemCard name={item.name} price={item.price} />
         </div>
+        
       ))}
+      </div>
       
    </>
   );
