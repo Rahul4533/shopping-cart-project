@@ -32,12 +32,26 @@ function CustumIteamProvider({ children }) {
     }
   };
 
-  const handleRemove = (price) => {
-    if (total <= 0) {
-      return;
-    }
-    setTotal((prevState) => prevState - price);
-    setItem(item - 1);
+  const handleRemove = (prod) => {
+    
+    const index=cart.findIndex((item)=>item.id===prod.id);
+    
+     if(index !== -1){
+        cart[index].qty--;
+        setItem(item-1);
+        setTotal(total-prod.price)
+        // eslint-disable-next-line eqeqeq
+        if(cart[index].qty == 0){
+          cart.splice(index,1);
+        }
+        
+        
+     }
+     setCart(cart);
+     
+     
+     
+   
   };
   const clearScreen = () => {
     setItem(0);
