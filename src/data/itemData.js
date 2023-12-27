@@ -24,6 +24,21 @@ const data = [
     name: 'Socks',
     price: 500,
   },
+  {
+    id: 6,
+    name: 'Bat',
+    price: 500,
+  },
+  {
+    id: 7,
+    name: 'laptop',
+    price: 500,
+  },
+  {
+    id: 8,
+    name: 'SoundBar',
+    price: 500,
+  },
 ];
 
 
